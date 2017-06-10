@@ -1,0 +1,28 @@
+body{
+	background-color: #319DF5;
+}
+
+.googlemap {
+  height: 100%;
+  position: absolute;
+  width: 100%;
+}
+.googlemap--canvas {
+  top: 20px;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+
+.location--button{
+    display: block;
+    margin: auto;
+}
+
+.question--comment_input {
+    display: block;
+    margin: auto;
+    height: 72px;
+    margin-top: 20px;
+}

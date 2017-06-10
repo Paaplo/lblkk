@@ -12,7 +12,7 @@ export default class App extends React.Component {
         <button
         	type="button"
         	className=""
-        	onClick={ (e) => this.showQuestions(e)}
+        	onClick={ () => this.props.switchScreen('location')}
         >Start now</button>
       </div>);
   }
