@@ -11,7 +11,7 @@ export default class Question extends Component {
 					<div className="info">
 						<h1>Topic</h1>
 						<p>What would you like to comment about?</p>
-						<p className="textbutton" onClick={ () => this.props.switchScreen('comment')}>Skip this step</p>
+						<p className="textbutton" onClick={ () => this.props.switchScreen('location')}><u>Go back</u></p>
 					</div>
 					<div className="tasklayer">
 						<Questionare 

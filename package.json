@@ -5,6 +5,7 @@
   "main": "live_app.js",
   "dependencies": {
     "axios": "^0.16.2",
+    "jquery": "^3.2.1",
     "live-server": "^1.2.0",
     "react": "^15.5.4",
     "react-dom": "^15.5.4",

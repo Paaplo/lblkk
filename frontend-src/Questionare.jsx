@@ -34,7 +34,7 @@ export default class Questionare extends Component {
 				{topics.map((topic, i) => {
 					return (
 						<div key={i}>
-							<label>
+							<label className="question--radio--label">
 								{topic}
 								<input 
 									type="radio"
@@ -47,16 +47,16 @@ export default class Questionare extends Component {
 						</div>
 					);
 				})}
-				<label>
+				<label className="comment--label">
 					Comment
-					<input
+					<textarea
 						type="textarea"
 						onChange={(e)=> this.handleCommentChange(e)}
 						className="question--comment_input"
 
 					/>
 				</label>
-				<button
+				<button className="second--next--button send--button"
 				 onClick={(e) => this.submitQueationare(e)}
 				>Send
 				</button>
