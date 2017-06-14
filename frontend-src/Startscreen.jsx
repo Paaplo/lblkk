@@ -6,14 +6,14 @@ export default class App extends React.Component {
   }
   render() {
     return (
-     <div style={{textAlign: 'center'}}>
-        <h1>Comment on city location</h1>
-        <p>Kiva kaupunki submits ...</p>
-        <button
-        	type="button"
-        	className=""
-        	onClick={ () => this.props.switchScreen('location')}
-        >Start now</button>
-      </div>);
+      <div>
+        <meta content="width=device-width,initial-scale=1" name="viewport"/>
+        <div className="info">
+          <h2>Comment on city location</h2>
+          <p>Kiva kaupunki submits help to build a map of recreational locations in your city and might help planning officers to take notice on places and things, that residents deem most important.</p>
+          <p className="textbutton" onClick={ () => this.props.switchScreen('location')}>
+            <u>Start now</u>
+          </p>
+      </div></div>);
   }
 }

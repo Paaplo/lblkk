@@ -1,28 +1,266 @@
-body{
-	background-color: #319DF5;
+@import url("http://fonts.googleapis.com/css?family=Indie+Flower:400");
+@import url("http://fonts.googleapis.com/css?family=Lato:300,400,900");
+
+/* Reset */
+
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    /*font: inherit;*/
+    vertical-align: baseline;
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    box-sizing: border-box;
 }
 
-.googlemap {
-  height: 100%;
-  position: absolute;
-  width: 100%;
+body{
+	background-color: #0277BD;
+  overflow:hidden;
 }
-.googlemap--canvas {
-  top: 20px;
+@media (max-width: 320px) {
+    body {
+        line-height: 1;
+    }
+}
+
+/* Progress indicator, right corner. */
+
+.progress {
+  color: white;
+  margin-right: 30px;
+  margin-top: 12px;
+  text-align: right;
+  font-size: 17pt;
+  opacity: 0.8;
+}
+
+/* Layers to put things on */
+
+.tasklayer{
+  background-color: white;
   display: block;
   width: 100%;
   height: 100%;
 }
 
+.layer{
+   width: 100%;
+    height: 50%;
+    margin-bottom: 75%;
+    background-color: #0277BD;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+
+}
+
+.lowerlayer{
+   width: 100%;
+   display: block;
+    position: relative;
+    background-color: #0277BD;
+    -moz-box-shadow:    inset  0  8px 8px -8px rgba(0,0,0,0.19);
+    -webkit-box-shadow: inset  0  8px 8px -8px rgba(0,0,0,0.19);
+     box-shadow:        inset  0  8px 8px -8px rgba(0,0,0,0.19);
+}
+
+/* Text */
+
+.info {
+  text-align: left; 
+  margin-left: 30px; 
+  margin-right: 55px;  
+  color: white;  
+}
+
+h1 {
+    font-size: 300%;
+    font-family: Indie Flower, sans-serif;
+    letter-spacing: 0.025em;
+    text-rendering: optimizelegibility;
+    font-weight: 700;
+    margin-top: 0px;
+}
+@media (min-width: 400px) {
+    h1 {
+        line-height: 1.75em;
+    }
+}
+
+.info h2 {
+    font-size: 300%;
+    font-family: Indie Flower, sans-serif;
+    letter-spacing: 0.025em;
+    text-rendering: optimizelegibility;
+    font-weight: 700;
+}
+
+.info p {
+
+  font-family: 'Lato', sans-serif;
+  font-size: 15pt;
+  font-weight: 300;
+  letter-spacing: 0.025em;
+  background-attachment: scroll, scroll, scroll, fixed;
+  background-position: bottom left, bottom right, top left, top center;
+  background-repeat: no-repeat, no-repeat, repeat, no-repeat;
+  background-size: 25em, 25em, auto, cover;
+  
+}
+
+/* Buttons */
+
+.textbutton{
+  font-family: 'Lato', sans-serif;
+  font-size: 15pt;
+  font-weight: 300;
+  letter-spacing: 0.025em;
+}
+.textbutton u {
+  position: relative;
+  top: 120px;
+  
+}
+@media (max-width: 320px) {
+    .textbutton u {
+        top: 65px;
+    }
+}
+
+.skipbutton{
+  font-family: 'Lato', sans-serif;
+  font-size: 15pt;
+  font-weight: 300;
+  letter-spacing: 0.025em;
+}
+
+
+.first--next--button{
+  margin: 15px 0;
+  line-height: 34px;
+  position: relative;
+  cursor: pointer;
+  user-select: none;
+  background-color: #FFCA28;
+  color: white;
+  border-radius: 17px / 17px;
+  border-color: #FFCA28;
+  border-width: 0;
+  left: 0px;
+  width: 165px;
+  height: 44px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  text-align: center;
+  font-family: 'Lato', sans-serif;
+  font-size: 15pt;
+  font-weight: 330;
+  letter-spacing: 0.025em;
+  background-attachment: scroll, scroll, scroll, fixed;
+  background-position: bottom left, bottom right, top left, top center;
+  background-repeat: no-repeat, no-repeat, repeat, no-repeat;
+  background-size: 25em, 25em, auto, cover;
+}
+@media (max-width: 320px) {
+    .first--next--button {
+        margin: 0 0;
+    }
+}
+
+.second--next--button{
+  margin: 15px 0;
+  line-height: 34px;
+  position: relative;
+  cursor: pointer;
+  user-select: none;
+  background-color: #FFCA28;
+  color: white;
+  border-radius: 17px / 17px;
+  border-color: #FFCA28;
+  border-width: 0;
+  left: 55px;
+  width: 150px;
+  height: 44px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  text-align: center;
+  font-family: 'Lato', sans-serif;
+  font-size: 15pt;
+  font-weight: 330;
+  letter-spacing: 0.025em;
+  background-attachment: scroll, scroll, scroll, fixed;
+  background-position: bottom left, bottom right, top left, top center;
+  background-repeat: no-repeat, no-repeat, repeat, no-repeat;
+  background-size: 25em, 25em, auto, cover;
+}
+@media (max-width: 320px) {
+    .second--next--button {
+        margin: 0 0;
+    }
+}
+.second--back--button{
+  margin: 15px 0;
+  line-height: 34px;
+  position: relative;
+  cursor: pointer;
+  user-select: none;
+  background-color: #BDBDBD;
+  color: white;
+  border-radius: 17px / 17px;
+  border-color: #BDBDBD;
+  border-width: 0;
+  left: -160px;
+  width: 44px;
+  height: 44px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  text-align: center;
+  font-family: 'Lato', sans-serif;
+  font-size: 17pt;
+  font-weight: 450;
+  opacity: 0.95;
+  letter-spacing: 0.025em;
+  background-attachment: scroll, scroll, scroll, fixed;
+  background-position: bottom left, bottom right, top left, top center;
+  background-repeat: no-repeat, no-repeat, repeat, no-repeat;
+  background-size: 25em, 25em, auto, cover;
+}
+@media (max-width: 320px) {
+    .second--back--button {
+        margin: 0 0;
+    }
+}
 
 .location--button{
+    bottom: 40px;
     display: block;
     margin: auto;
+    position: fixed;
 }
+
+/* Inputs */
 
 .question--comment_input {
     display: block;
     margin: auto;
     height: 72px;
     margin-top: 20px;
+}
+
+/* Gmap */
+
+.googlemap {
+  height: 45%;
+  position: absolute;
+  width: 100%;
+}
+.googlemap--canvas {
+  top: 5px;
+  bottom: 5px;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* Image styling */
+
+.img-circle {
+    border-radius: 50%;
 }
