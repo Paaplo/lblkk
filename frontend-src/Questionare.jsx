@@ -31,11 +31,11 @@ export default class Questionare extends Component {
 	render() {
 		return (
 			<div>
+				<meta content="width=device-width,initial-scale=1" name="viewport"/>
 				{topics.map((topic, i) => {
 					return (
 						<div key={i}>
 							<label className="question--radio--label">
-								{topic}
 								<input 
 									type="radio"
 									value={i}
@@ -44,6 +44,7 @@ export default class Questionare extends Component {
 									name="topic"
 									onChange={(e)=>this.handleTopicChange(e)}
 								/>
+								{topic}
 							</label>
 						</div>
 					);
@@ -57,9 +58,9 @@ export default class Questionare extends Component {
 
 					/>
 				</label>
-				<button className="second--next--button send--button"
+				<button className="second--send--button send--button"
 				 onClick={(e) => this.submitQueationare(e)}
-				>Send
+				>Send &#10003;
 				</button>
 			</div>
 		);

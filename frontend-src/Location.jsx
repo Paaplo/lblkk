@@ -12,7 +12,7 @@ export default class Location extends Component {
 			<div>
 				<meta content="width=device-width,initial-scale=1" name="viewport"/>
       	<div className="layer">
-					<div className="progress">&#8212; &#8212; &#8212;</div>
+					<div className="progress"><b>&#8212;</b> &#8212;</div>
 					<div className="info">
 						<h1>Location</h1>
 						<p>Here's the location we have for you. If you want to change it drag the map with two fingers and tap to select.</p>

@@ -4,10 +4,12 @@ import GMap from './GoogleMapQ.jsx';
 export default class Thanks extends Component {
 	render() {
 		return (
+			<div>
+				<meta content="width=device-width,initial-scale=1" name="viewport"/>
 			<div className="info">
         		<h2>Thank you!</h2>
         		<div>
-        			<p>Thank you, for submitting your comment! It has now been saved and should soon appear to the comment visualization map.</p>
+        			<p>Thank you, for submitting your comment! It has now been saved, visualization map will be compiled and published in a later time.</p>
         		</div>
 				<div className="thanks--map">
 					<GMap 
@@ -23,6 +25,7 @@ export default class Thanks extends Component {
 					</p>
 				</div>
       		</div>	
+			</div>
 		);
 	}
 }

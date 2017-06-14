@@ -7,7 +7,7 @@ export default class Question extends Component {
 			<div>
 				<meta content="width=device-width,initial-scale=1" name="viewport"/>
 				<div className="layer">
-					<div className="progress">&#8212; &#8212; &#8212;</div>
+					<div className="progress">&#8212; <b>&#8212;</b></div>
 					<div className="info">
 						<h1>Topic</h1>
 						<p>What would you like to comment about?</p>

@@ -15,9 +15,6 @@ export default class App extends React.Component {
           <br/>
           <br/>
           <br/>
-          <br/>
-          <br/>
-          <br/>
           <p className="textbutton" onClick={ () => this.props.switchScreen('location')}>
             <u>Start now</u>
           </p>
