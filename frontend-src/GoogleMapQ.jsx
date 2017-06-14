@@ -39,7 +39,7 @@ export default class GMap extends React.Component {
 
   // clean up event listeners when component unmounts
   componentDidUnMount() {
-    google.maps.event.clearListeners(map, 'zoom_changed')
+    google.maps.event.clearListeners(map, 'zoom_changed');
   }
   componentWillReceiveProps(nextProps) {
     this.markers.forEach((m) => {
@@ -79,44 +79,44 @@ export default class GMap extends React.Component {
         infowindow.setContent('<div id="iw-container"><div class="iw-title">'+topic+'</div><div class="iw-content">'+q.comment+'</div><div class="iw-bottom-gradient"></div></div>' );
         infowindow.open(this.map, marker);
 
-      }
-    })(marker, i));
+        }
+      })(marker, i));
 
-google.maps.event.addListener(infowindow, 'domready', function() {
+      google.maps.event.addListener(infowindow, 'domready', function() {
 
-   // Reference to the DIV which receives the contents of the infowindow using jQuery
-   var iwOuter = $('.gm-style-iw');
+       // Reference to the DIV which receives the contents of the infowindow using jQuery
+       var iwOuter = $('.gm-style-iw');
 
-   /* The DIV we want to change is above the .gm-style-iw DIV.
-    * So, we use jQuery and create a iwBackground variable,
-    * and took advantage of the existing reference to .gm-style-iw for the previous DIV with .prev().
-    */
-   var iwBackground = iwOuter.prev();
+       /* The DIV we want to change is above the .gm-style-iw DIV.
+        * So, we use jQuery and create a iwBackground variable,
+        * and took advantage of the existing reference to .gm-style-iw for the previous DIV with .prev().
+        */
+       var iwBackground = iwOuter.prev();
 
-   // Remove the background shadow DIV
-   iwBackground.children(':nth-child(2)').css({'display' : 'none'});
+       // Remove the background shadow DIV
+       iwBackground.children(':nth-child(2)').css({'display' : 'none'});
 
-   // Remove the white background DIV
-   iwBackground.children(':nth-child(4)').css({'display' : 'none'});
-var iwCloseBtn = iwOuter.next();
+       // Remove the white background DIV
+       iwBackground.children(':nth-child(4)').css({'display' : 'none'});
+      var iwCloseBtn = iwOuter.next();
 
-// Apply the desired effect to the close button
-iwCloseBtn.css({
-  opacity: '1', // by default the close button has an opacity of 0.7
-  right: '38px', top: '3px', // button repositioning
-  border: '7px solid #48b5e9', // increasing button border and new color
-  'border-radius': '13px', // circular effect
-  'box-shadow': '0 0 5px #3990B9', // 3D effect to highlight the button
-  'border': '0'
-  });
+      // Apply the desired effect to the close button
+      iwCloseBtn.css({
+        opacity: '1', // by default the close button has an opacity of 0.7
+        right: '38px', top: '3px', // button repositioning
+        border: '7px solid #48b5e9', // increasing button border and new color
+        'border-radius': '13px', // circular effect
+        'box-shadow': '0 0 5px #3990B9', // 3D effect to highlight the button
+        'border': '0'
+      });
 
-// The API automatically applies 0.7 opacity to the button after the mouseout event.
-// This function reverses this event to the desired value.
-iwCloseBtn.mouseout(function(){
-  $(this).css({opacity: '1'});
-});
+      // The API automatically applies 0.7 opacity to the button after the mouseout event.
+      // This function reverses this event to the desired value.
+      iwCloseBtn.mouseout(function(){
+        $(this).css({opacity: '1'});
+      });
 
-});
+    });
     return marker;
 	}
 

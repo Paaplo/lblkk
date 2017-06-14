@@ -41,6 +41,7 @@ export default class Questionare extends Component {
 									value={i}
 									required
 									rows="5"
+									name="topic"
 									onChange={(e)=>this.handleTopicChange(e)}
 								/>
 							</label>
