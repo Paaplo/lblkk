@@ -32,16 +32,25 @@ export default class Location extends Component {
 	}
 	render() {
 		return (
-			<div>Loc
-				<button
-					className="location--button"
-        	onClick={ () => this.props.switchScreen('question')}
-				>
-					next
-				</button>
-				<GMap 
-				  initialCenter={this.state.location}
-				/>
+			<div>
+				<meta content="width=device-width,initial-scale=1" name="viewport"/>
+      	<div className="layer">
+					<div className="progress">&#8212; &#8212; &#8212;</div>
+					<div className="info">
+						<h1>Location</h1>
+						<p>Here's the location we have for you. If you want to change it drag the map with two fingers and tap to select.</p>
+					</div>
+					<div className="tasklayer">
+						<GMap 
+							initialCenter={this.state.location}
+						/>
+					</div>
+				</div>
+				<div className="lowerlayer">
+					<button className="first--next--button" onClick={ () => this.props.switchScreen('question')}>
+					Next step &#10142;
+					</button>
+				</div>
 			</div>
 		);
 	}

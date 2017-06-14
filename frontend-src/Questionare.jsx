@@ -1,8 +1,14 @@
 import React, { Component } from 'react';
 
 const topics = [
-'Virkistävä paikka',
-'Kaupungin tinkimätön helmi'
+'Refreshing place',
+'Great place for encounters and city events',
+'Unquestionable jewel of the city',
+'My development idea on this site',
+'Accessibility problem',
+'Difficult to walk on foot',
+'Unsafe place',
+'Noisy place'
 ]
 export default class Questionare extends Component {
 	constructor(props) {
